@@ -15,3 +15,9 @@
 # minikube service nginx-proxy => cria um túnel para acessar o serviço localmente
 # minikube service go-api
 # NodePort e ClusterIP
+# minikube mount /home/allison/workspace/Docker/html:/home/allison/workspace/Docker/html => preciso rodar isso para eu acessar o nginx
+# kubeclt logs nginx-proxy
+# minikube tunnel => o minikube não consegue provisionar um LoadBalancer então ele fica como pending. Usando o minkube tunnel ele cria um endereço IP externo permitindo acesso ao LoadBalance. Quando o serviço é encerrado ele volta ao normal. 
+# kubectl port-forwasrd svc/go-api 8081:3000 => acessando uma porta externa pelo cluster
+# kubectl port-forward svc/nginx-proxy 8080:80
+# kubectl exec -it nginx-proxy-5865f7bf96-xdpdf -- /bin/bash
